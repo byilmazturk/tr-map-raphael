@@ -13,8 +13,28 @@ window.onload = function () {
 		"stroke-width": "1.0",
 		"stroke-dasharray": "none"
 	};
-	var mPaths = turkeyMap.paths; 
-	for (var state in mPaths) {
-		R.path(mPaths[state]).attr(attr);
+	
+	mPaths = turkeyMap.paths;
+	mRaphael = {};
+	
+	for (var province in mPaths) {
+		mRaphael[province] = R.path(mPaths[province]).attr(attr);
 	}
+	
+    for (var province in mRaphael) {
+    	mRaphael[province].color = Raphael.getColor();
+        
+        (function (pr, province) {
+          pr[0].style.cursor = "pointer";
+          pr[0].onmouseover = function () {
+        	  pr.animate({fill: pr.color}, 500);
+        	  pr.toFront();
+          };
+          pr[0].onmouseout = function () {
+        	  pr.animate({fill: "#d3d3d3"}, 500);
+        	  pr.toFront();
+          };
+                     
+        })(mRaphael[province], province);
+      }
 };
