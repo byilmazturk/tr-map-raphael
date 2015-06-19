@@ -6,7 +6,7 @@ window.onload = function () {
     });
 	var attr = {
 		"fill": "#d3d3d3",
-		"stroke": "#fff",
+		"stroke": "#000",
 		"stroke-opacity": "1",
 		"stroke-linejoin": "round",
 		"stroke-miterlimit": "4",
