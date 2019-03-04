@@ -1,6 +1,6 @@
 window.onload = function () {
-	var R = Raphael("izmir", 1024, 500);
-	R.rect(0, 0, 1024, 500, 0).attr({
+	var R = Raphael("izmir", 1024, 800);
+	R.rect(0, 0, 1024, 800, 0).attr({
         stroke: "none",
         fill: "0-#9bb7cb-#adc8da"
     });
@@ -14,7 +14,7 @@ window.onload = function () {
 		"stroke-dasharray": "none"
 	};
 	
-	mPaths = turkeyMap.paths;
+	mPaths = izmirMap.paths;
 	mRaphael = {};
 	
 	for (var province in mPaths) {
