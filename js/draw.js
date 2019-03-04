@@ -1,5 +1,5 @@
 window.onload = function () {
-	var R = Raphael("turkey", 1024, 500);
+	var R = Raphael("izmir", 1024, 500);
 	R.rect(0, 0, 1024, 500, 0).attr({
         stroke: "none",
         fill: "0-#9bb7cb-#adc8da"
